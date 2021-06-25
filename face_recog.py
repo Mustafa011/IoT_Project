@@ -5,20 +5,20 @@ import datetime
 import requests
 data = {}
 temp = None
-url = '<api URL>'
+url = '<API URL>'
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read('trainer/trainer.yml')
 cascadePath = "haar_face.xml"
 faceCascade = cv2.CascadeClassifier(cascadePath);
 
-font = cv2.FONT_HERSHEY_SIMPLEX
+font = cv2.FONT_HERSHEY_SCRIPT_SIMPLEX
 
 #iniciate id counter
 id = 0
 
 
-names = ['Unknown', 'Mustafa M C','Shujan Pannag J','Manu M B'] 
+names = ['Unknown', 'Mustafa M C','Shujan Pannag J','Manu M B'] # names matching the dataset
 
 # Initialize and start realtime video capture
 cam = cv2.VideoCapture(0)
@@ -62,7 +62,7 @@ while True:
             temp = str(id)
 
     
-    cv2.imshow('camera',img) 
+    cv2.imshow('CAMERA',img) 
 
     k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
     if k == 27:
