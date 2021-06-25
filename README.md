@@ -10,7 +10,7 @@ Doorstep monitoring system built using Raspberry Pi, Python and OpenCV.
 ```
     $ python3 face_training.py
 ```
-## Run
+## Run - recognizing faces and sending it to the database
 ```
     $ python3 face_recog.py
 ```
